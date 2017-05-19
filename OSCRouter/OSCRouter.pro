@@ -26,32 +26,33 @@ SOURCES += EosPlatform.cpp \
            NetworkUtils.cpp \
            Router.cpp
 
-#win32 
-#    HEADERS += ../../EosSyncLib/EosSyncLib/EosTcp_Win.h \
-#               ../../EosSyncLib/EosSyncLib/EosUdp_Win.h
-#    SOURCES += ../../EosSyncLib/EosSyncLib/EosTcp_Win.cpp \
-#               ../../EosSyncLib/EosSyncLib/EosUdp_Win.cpp
+win32 {
+    HEADERS += ../../EosSyncLib/EosSyncLib/EosTcp_Win.h \
+               ../../EosSyncLib/EosSyncLib/EosUdp_Win.h
+    SOURCES += ../../EosSyncLib/EosSyncLib/EosTcp_Win.cpp \
+               ../../EosSyncLib/EosSyncLib/EosUdp_Win.cpp
+}
 
-#macx
-#    HEADERS += EosPlatform_Mac.h \
-#               EosPlatform_Mac_Bridge.h \
-#               EosPlatform_Mac_Native.h
-#
-#    SOURCES += EosPlatform_Mac.cpp
-#
-#
-#    HEADERS += ../../EosSyncLib/EosSyncLib/EosTcp_Mac.h \
-#               ../../EosSyncLib/EosSyncLib/EosUdp_Mac.h
-#    SOURCES += ../../EosSyncLib/EosSyncLib/EosTcp_Mac.cpp \
-#               ../../EosSyncLib/EosSyncLib/EosUdp_Mac.cpp
+macx {
+    HEADERS += EosPlatform_Mac.h \
+               EosPlatform_Mac_Bridge.h \
+               EosPlatform_Mac_Native.h
+
+    SOURCES += EosPlatform_Mac.cpp
 
 
-#linux
+    HEADERS += ../../EosSyncLib/EosSyncLib/EosTcp_Mac.h \
+               ../../EosSyncLib/EosSyncLib/EosUdp_Mac.h
+    SOURCES += ../../EosSyncLib/EosSyncLib/EosTcp_Mac.cpp \
+               ../../EosSyncLib/EosSyncLib/EosUdp_Mac.cpp
+}
 
+unix {
     HEADERS += ../../EosSyncLib/EosSyncLib/EosTcp_Nix.h \
                ../../EosSyncLib/EosSyncLib/EosUdp_Nix.h
     SOURCES += ../../EosSyncLib/EosSyncLib/EosTcp_Nix.cpp \
                ../../EosSyncLib/EosSyncLib/EosUdp_Nix.cpp
+}
 
 # EosSyncLib minus main.cpp
 
