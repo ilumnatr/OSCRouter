@@ -20,8 +20,10 @@
 
 #include "EosPlatform.h"
 
-#ifndef WIN32
+#ifdef WIN32
+#elif defined TARGET_OS_MAC
 	#include "EosPlatform_Mac.h"
+#elif defined __linux__
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -45,8 +47,10 @@ EosPlatform* EosPlatform::Create()
 {
 #ifdef WIN32
 	return (new EosPlatform());
-#else
+#elif defined TARGET_OS_MAC
 	return (new EosPlatform_Mac());
+#elif defined __linux__
+	return (new EosPlatform());
 #endif
 }
 

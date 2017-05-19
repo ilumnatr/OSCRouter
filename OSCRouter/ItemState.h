@@ -22,6 +22,7 @@
 #ifndef ITEM_STATE_H
 #define ITEM_STATE_H
 
+#include <cstddef>
 #include <vector>
 
 class QColor;

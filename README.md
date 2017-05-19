@@ -8,6 +8,9 @@ OSCRouter is open-source software (developed by a combination of end users and E
 
 We also welcome pull requests for bug fixes and feature additions.
 
+##This Fork
+This fork's purpose is to get OSCRouter running on linux hosts, with the eventual goal of a non-gui, daemonized setup suitable for running on a Raspberry Pi or similar device.
+
 # Documentation
 
 [Eos Integration via OSC.pdf](https://github.com/ElectronicTheatreControlsLabs/EosSyncLib/raw/master/Eos%20Integration%20via%20OSC.pdf)
